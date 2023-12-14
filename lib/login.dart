@@ -41,23 +41,22 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Padding(
                   padding: const EdgeInsets.all(16.0),
-              child: FadeInImage.memoryNetwork(
+                  child: Image.asset('assets/perry.jpeg',height: 310),
+
+              
+              /*child: FadeInImage.memoryNetwork(
                   placeholder: kTransparentImage,
                   image: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8b472d70-a0d6-41b5-9a66-c35687090acc/d8erp10-3fab19e7-fdba-4d50-bfcc-29115ff9a240.jpg/v1/fill/w_1024,h_1326,q_75,strp/perry_platipus_by_edsfox_d8erp10-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzhiNDcyZDcwLWEwZDYtNDFiNS05YTY2LWMzNTY4NzA5MGFjY1wvZDhlcnAxMC0zZmFiMTllNy1mZGJhLTRkNTAtYmZjYy0yOTExNWZmOWEyNDAuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.OM563nqEM_oakYn_Bjy4Jq5i3SgwizzE4D4Rb-63aJw",
-              height:310
-              ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: TextField(
-                  controller: serverIpController,
-                  decoration: InputDecoration(
-                    labelText: "IP address",
-                  ),),
+                  height:310
+              ),*/
               ),
 
-
+              Text( "Current IP Address is $currentip", style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+              ),
 
               Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -79,6 +78,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
               ),
+
+
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextField(
+                  controller: serverIpController,
+                  decoration: InputDecoration(
+                    labelText: "IP address",
+                  ),),
+              ),
+
 
 
               ElevatedButton(
